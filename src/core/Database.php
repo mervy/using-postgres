@@ -1,5 +1,6 @@
 <?php
-namespace App\Core;
+
+namespace Core;
 
 use PDO;
 use PDOException;
@@ -11,12 +12,11 @@ class Database
 
     private function __construct()
     {
-        $host = getenv('DB_HOST');
-        $port = getenv('DB_PORT');
-        echo $port;
-        $dbname = getenv('DB_NAME');
-        $user = getenv('DB_USER');
-        $pass = getenv('DB_PASS');
+        $host = getenv('DB_HOST') ?: 'localhost';
+        $port = getenv('DB_PORT') ?: '5432';
+        $dbname = getenv('DB_NAME') ?: 'blog';
+        $user = getenv('DB_USER') ?: 'root';
+        $pass = getenv('DB_PASS') ?: '';
 
         try {
             $this->pdo = new PDO(

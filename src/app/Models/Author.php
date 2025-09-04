@@ -1,8 +1,9 @@
 <?php
+
 namespace App\Models;
 
-use App\Core\Database;
 use PDO;
+use Core\Database;
 
 class Author
 {
