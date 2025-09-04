@@ -2,7 +2,8 @@
     "name": "mervy/using-postgres",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/app",
+            "App\\Core\\": "src/core"
         }
     },
     "authors": [
